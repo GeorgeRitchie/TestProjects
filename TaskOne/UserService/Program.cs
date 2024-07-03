@@ -1,5 +1,6 @@
 using MassTransit;
 using Microsoft.EntityFrameworkCore;
+using UserService.Consumers;
 using UserService.Data;
 using UserService.Services;
 
@@ -20,6 +21,8 @@ builder.Services.AddSingleton<IFileManager, FileManager>();
 builder.Services.AddMassTransit(config =>
 {
 	config.SetKebabCaseEndpointNameFormatter();
+
+	config.AddConsumer<PhotoCreatedConsumer>();
 
 	//config.UsingRabbitMq((context, cfg) =>
 	//{
