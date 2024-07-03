@@ -17,7 +17,7 @@ namespace UserService.Consumers
 
 		public async Task Consume(ConsumeContext<PhotoCreatedEvent> context)
 		{
-			var user = await dbContext.Users.SingleOrDefaultAsync(i => i.Id == context.Message.UserId);
+			var user = await dbContext.Users.Include(i => i.Photos).SingleOrDefaultAsync(i => i.Id == context.Message.UserId);
 
 			if (user == null)
 				return;

@@ -19,18 +19,18 @@ builder.Services.AddMassTransit(config =>
 
 	config.AddConsumer<UserCreatedConsumer>();
 
-	//config.UsingRabbitMq((context, cfg) =>
-	//{
-	//	cfg.Host("localhost", "/", h =>
-	//	{
-	//		h.Username("guest");
-	//		h.Password("guest");
-	//	});
+	config.UsingRabbitMq((context, cfg) =>
+	{
+		cfg.Host("localhost", "/", h =>
+		{
+			h.Username("guest");
+			h.Password("guest");
+		});
 
-	//	cfg.ConfigureEndpoints(context);
-	//});
+		cfg.ConfigureEndpoints(context);
+	});
 
-	config.UsingInMemory((context, cfg) => cfg.ConfigureEndpoints(context));
+	//config.UsingInMemory((context, cfg) => cfg.ConfigureEndpoints(context));
 });
 
 var app = builder.Build();

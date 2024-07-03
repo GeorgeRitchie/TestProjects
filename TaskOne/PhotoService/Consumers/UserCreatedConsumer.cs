@@ -20,13 +20,13 @@ namespace PhotoService.Consumers
 		{
 			var message = context.Message;
 
-			await Task.Delay(1000);
+			await Task.Delay(3000);
 			var smallPhotoSource = await fileManager.DuplicateAsync(message.OriginalPhotoSource, "small");
 
-			await Task.Delay(1000);
+			await Task.Delay(3000);
 			var normalPhotoSource = await fileManager.DuplicateAsync(message.OriginalPhotoSource, "normal");
 
-			await Task.Delay(1000);
+			await Task.Delay(3000);
 			var bigPhotoSource = await fileManager.DuplicateAsync(message.OriginalPhotoSource, "big");
 
 			await bus.Publish(new PhotoCreatedEvent

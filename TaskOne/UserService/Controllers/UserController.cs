@@ -53,6 +53,7 @@ namespace UserService.Controllers
 				Id = Guid.NewGuid(),
 				Name = userDto.Name,
 				Email = userDto.Email,
+				Photos = new(),
 				IsConfirmed = false,
 			};
 

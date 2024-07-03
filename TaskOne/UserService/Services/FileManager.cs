@@ -35,7 +35,7 @@ namespace UserService.Services
 				await file.CopyToAsync(stream);
 			}
 
-			return fileName;
+			return fullPath;
 		}
 	}
 }
