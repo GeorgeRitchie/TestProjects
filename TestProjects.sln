@@ -7,7 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserService", "TaskOne\User
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotoService", "TaskOne\PhotoService\PhotoService.csproj", "{93275B44-7716-4B29-83C9-B1AF67A55A3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "TaskOne\Contracts\Contracts.csproj", "{9D2004C1-5FEC-4CCB-AA70-F1EFB56A8920}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "TaskOne\Contracts\Contracts.csproj", "{9D2004C1-5FEC-4CCB-AA70-F1EFB56A8920}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Caching", "Caching", "{9C1844D7-8D0A-42F2-8CBC-8D66EFAF501F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caching", "Caching\Caching\Caching.csproj", "{88CA454E-8E04-4FBE-9EAA-FFBF758F6177}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageBroker", "MessageBroker", "{1F21E326-6836-430B-8FC6-EA673B21F63C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,9 +33,19 @@ Global
 		{9D2004C1-5FEC-4CCB-AA70-F1EFB56A8920}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9D2004C1-5FEC-4CCB-AA70-F1EFB56A8920}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9D2004C1-5FEC-4CCB-AA70-F1EFB56A8920}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88CA454E-8E04-4FBE-9EAA-FFBF758F6177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88CA454E-8E04-4FBE-9EAA-FFBF758F6177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88CA454E-8E04-4FBE-9EAA-FFBF758F6177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88CA454E-8E04-4FBE-9EAA-FFBF758F6177}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4E15C9C0-3BF5-42AB-ABBA-6A37F62C9F7B} = {1F21E326-6836-430B-8FC6-EA673B21F63C}
+		{93275B44-7716-4B29-83C9-B1AF67A55A3C} = {1F21E326-6836-430B-8FC6-EA673B21F63C}
+		{9D2004C1-5FEC-4CCB-AA70-F1EFB56A8920} = {1F21E326-6836-430B-8FC6-EA673B21F63C}
+		{88CA454E-8E04-4FBE-9EAA-FFBF758F6177} = {9C1844D7-8D0A-42F2-8CBC-8D66EFAF501F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0D1CF96D-884B-4D7C-A3C8-3E259A2687D8}
